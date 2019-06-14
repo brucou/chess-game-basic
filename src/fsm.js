@@ -139,7 +139,7 @@ function isLegalNonWinningMove(extendedState, eventData, settings){
   });
   const isLegalMove = move != null;
   const hasWon= chessEngine.game_over();
-  chessEngine.undo();
+  isLegalMove && chessEngine.undo();
 
   return isLegalMove  && !hasWon
 }
@@ -166,7 +166,7 @@ function isLegalWinningMove(extendedState, eventData, settings){
   const hasWon= chessEngine.game_over();
   // Undo the effect! We may run this again in the next guard
   // Anyways no effect in guards please!!
-  chessEngine.undo();
+  isLegalMove && chessEngine.undo();
 
   return isLegalMove  && hasWon
 }
