@@ -1,11 +1,10 @@
-import React from "react";
 import {render} from "react-dom";
 import h from "react-hyperscript";
 import { Machine, getEventEmitterAdapter } from "react-state-driven";
-import { createStateMachine, fsmContracts } from "kingly"
+import { createStateMachine } from "kingly"
 import Chessboard from "chessboardjsx";
 import emitonoff from "emitonoff";
-import {Chess} from  "chess.js";
+import Chess from "chess.js";
 
 import gameFsmDef from "./fsm";
 import "./index.css";
